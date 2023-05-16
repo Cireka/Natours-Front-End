@@ -1,0 +1,61 @@
+.NavBar {
+  margin: 0 auto;
+  margin-top: 3rem;
+  padding: 0 5rem;
+  width: 95%;
+  height: 8rem;
+  background-color: #444;
+}
+.NavBarParrent {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #f7f7f7;
+}
+.NavBarParrent > a {
+  text-decoration: none;
+  color: #f7f7f7;
+}
+.Image {
+  width: 6.8rem;
+  height: 3.5rem;
+}
+.NavButtonsParrent {
+  flex: 1; /* Take up remaining space */
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+}
+.HomeLinkParrent {
+  flex: 1; /* Take up remaining space */
+  display: flex;
+  justify-content: flex-start; /* Align buttons to the left */
+}
+.AllTours,
+.logButton,
+.regButton {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-size: 1.6rem;
+  color: #f7f7f7;
+  background-color: inherit;
+}
+.AllTours:hover,
+.logButton:hover,
+.regButton:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+}
+.regButton:hover {
+  background-color: white;
+  color: #444;
+}
+.logButton {
+  border: none;
+  margin-right: 3rem;
+}
+.regButton {
+  border: 1px solid white;
+  border-radius: 2.4rem;
+  padding: 1.4rem 3rem;
+}
