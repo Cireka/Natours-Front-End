@@ -1,0 +1,8 @@
+.ToursSectionParrent {
+  max-width: 120rem;
+  margin: 0 auto;
+  margin-top: 8rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 7rem;
+}

@@ -31,12 +31,17 @@
   display: flex;
   justify-content: flex-start; /* Align buttons to the left */
 }
+.HomeLinkParrent > a {
+  text-decoration: none;
+}
 .AllTours,
 .logButton,
 .regButton {
+  font-weight: 400;
+  font-family: "Rajdhani", sans-serif;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #f7f7f7;
   background-color: inherit;
 }

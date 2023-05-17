@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import style from "./NavBar.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../public/logo-white.png";
+import Logo from "../../public/logo-white.png";
 
 export default function NavBar() {
   return (
@@ -14,7 +14,7 @@ export default function NavBar() {
               <h1 className={style.AllTours}>All Tours</h1>
             </Link>
           </div>
-          <Image className={style.Image} src={Logo} />
+          <Image alt="Natours Logo" className={style.Image} src={Logo} />
           <div className={style.NavButtonsParrent}>
             <button className={style.logButton}>LOG IN</button>
             <button className={style.regButton}>SIGN UP</button>

@@ -1,0 +1,146 @@
+.TourBox {
+  width: 35rem;
+  height: 53.4rem;
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0px 2px 27px -5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 2px 27px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 2px 27px -5px rgba(0, 0, 0, 0.75);
+  /* border: 1px solid black; */
+}
+.TourBoxContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.ImageParrent {
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 89%, 54% 94%, 0 100%, 0% 50%);
+}
+.image {
+  width: 100%;
+  height: auto;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(#7dd56f),
+    to(#28b487)
+  );
+  background-image: linear-gradient(to right bottom, #7dd56f, #28b487);
+
+  opacity: 0.7;
+  z-index: 1;
+}
+.DescriptionParrent {
+  padding: 0 3.2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.DescriptionParrent > h3 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.DescriptionParrent > p {
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  line-height: 1.4;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #777;
+}
+.InfoParrent {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.InfoParrent > p {
+  font-size: 1.4rem;
+}
+
+.DetailsParrent {
+  padding: 0 3.2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f7f7f7;
+}
+.icons {
+  width: 20px;
+  height: 20px;
+  color: #28b487;
+  margin-right: 0.8rem;
+}
+.infoGrid {
+  margin-top: 2rem;
+  padding: 0 3.2rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.8rem 1.8rem;
+  margin-bottom: 2rem;
+}
+.DetailsButton {
+  overflow-y: hidden;
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  background-color: #55c57a;
+  font-size: 1.4rem;
+  border-radius: 3.2rem;
+  padding: 1.2rem 3rem;
+  border: none;
+  color: #fff;
+  position: relative;
+  transition: transform 0.5s ease-in-out; /* Add transition property */
+  transition: ease-in-out 0.3s;
+}
+
+.DetailsButton:hover {
+  transform: translateY(-5px); /* Apply initial hover transformation */
+  box-shadow: 0px 10px 60px -12px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 10px 60px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 60px -12px rgba(0, 0, 0, 0.75);
+}
+
+.DetailsButton:not(:hover) {
+  transform: translateY(0); /* Apply animation transformation */
+}
+.DetailsButton:active {
+  background-color: #449e62;
+}
+
+@keyframes myAnim {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+.StatsParrent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
+.StatsParrent > p {
+  color: #999;
+  font-size: 1.4rem;
+}
+.StatsParrent > p > span {
+  color: #777;
+}
