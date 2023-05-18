@@ -14,44 +14,52 @@ export default function TourBox(props) {
       <div className={style.TourBox}>
         <div className={style.TourBoxContainer}>
           <div className={style.ImageParrent}>
+            <h2 className={style.HeadingTertirary}>
+              <span className={style.Title}>{props.TourName}</span>
+            </h2>
             <span className={style.overlay} />
             <Image
-              prefix={"true"}
+              priority={1}
               alt="Cover Photo For The Tour"
               quality={100}
               className={style.image}
-              src={cover}
+              src={`/tours/${props.Image}`} // Remove the "/public" prefix
+              width={1200} // Set an appropriate value for the width
+              height={1200} // Set an appropriate value for the height
             />
           </div>
           <div className={style.DescriptionParrent}>
-            <h3>MEDIUM 7-DAY TOUR </h3>
-            <p>Exploring the jaw-dropping US east coast by foot and by boat</p>
+            <h3>
+              {props.TourDifficulty}-{props.TourDurration}-DAY-TOUR
+            </h3>
+            <p>{props.description}</p>
           </div>
           <div className={style.infoGrid}>
             <div className={style.InfoParrent}>
               <SlLocationPin className={style.icons} />
-              <p>Miami, USA</p>
+              <p>{props.TourLocation}</p>
             </div>
             <div className={style.InfoParrent}>
               <AiOutlineCalendar className={style.icons} />
-              <p>June 2021</p>
+              <p>{props.TourStartDate}</p>
             </div>
             <div className={style.InfoParrent}>
               <BsFlag className={style.icons} />
-              <p>4 stops</p>
+              <p>{props.TourAmountOfStops} Stops</p>
             </div>
             <div className={style.InfoParrent}>
               <BiUser className={style.icons} />
-              <p>15 people</p>
+              <p>{props.TourGroupSize} People</p>
             </div>
           </div>
           <div className={style.DetailsParrent}>
             <div className={style.StatsParrent}>
               <p>
-                <span>$497</span> per person
+                <span>${props.TourPrice}</span> per person
               </p>
               <p>
-                <span>4.3</span> rating (7)
+                <span>{props.TourAvrageRating}</span> rating (
+                {props.TourRatings})
               </p>
             </div>
             <button className={style.DetailsButton}>Details</button>

@@ -17,6 +17,9 @@
 
 .ImageParrent {
   position: relative;
+}
+.image,
+.overlay {
   clip-path: polygon(0 0, 100% 0, 100% 89%, 54% 94%, 0 100%, 0% 50%);
 }
 .image {
@@ -143,4 +146,38 @@
 }
 .StatsParrent > p > span {
   color: #777;
+}
+.Title {
+  padding: 0.6rem 1.5rem;
+  line-height: 1.4;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(rgba(125, 213, 111, 0.85)),
+    to(rgba(40, 180, 135, 0.85))
+  );
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(125, 213, 111, 0.85),
+    rgba(40, 180, 135, 0.85)
+  );
+
+  font-family: "Lato", sans-serif;
+  font-size: 2.75rem;
+  text-align: right;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.HeadingTertirary {
+  font-size: 2.75rem;
+  text-align: right;
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  width: 70%;
+  z-index: 10;
 }
