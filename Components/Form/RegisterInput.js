@@ -7,13 +7,26 @@ export default function RegisterInput() {
     name: "",
     email: "",
     password: "",
-    confirmPassword: "",
+    passwordConfirm: "",
   });
 
-  const SubmitHanddler = (event) => {
+  function SubmitHanddler(event) {
     event.preventDefault();
-    console.log(userInfo);
-  };
+    fetch("https://natours-app-xp62.onrender.com/api/v1/users/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(userInfo),
+    })
+      .then((res) => res.json()) // Parse response as JSON
+      .then((data) => {
+        console.log(data); // Handle the response data
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
 
   const nameHandller = (event) => {
     const input = event.target.value;
@@ -29,7 +42,7 @@ export default function RegisterInput() {
   };
   const passwordConfirmHandller = (event) => {
     const input = event.target.value;
-    setUserInfo({ ...userInfo, confirmPassword: input });
+    setUserInfo({ ...userInfo, passwordConfirm: input });
   };
   return (
     <form onSubmit={SubmitHanddler}>
