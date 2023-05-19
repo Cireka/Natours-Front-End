@@ -25,6 +25,7 @@
   flex: 1; /* Take up remaining space */
   display: flex;
   justify-content: flex-end; /* Align buttons to the right */
+  align-items: center;
 }
 .HomeLinkParrent {
   flex: 1; /* Take up remaining space */
@@ -37,6 +38,7 @@
 .AllTours,
 .logButton,
 .regButton {
+  text-decoration: none;
   font-weight: 400;
   font-family: "Rajdhani", sans-serif;
   -webkit-transition: all 0.3s;

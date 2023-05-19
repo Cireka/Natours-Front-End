@@ -1,3 +1,4 @@
+"use client";
 import { Fragment } from "react";
 import style from "./NavBar.module.css";
 import Link from "next/link";
@@ -16,8 +17,12 @@ export default function NavBar() {
           </div>
           <Image alt="Natours Logo" className={style.Image} src={Logo} />
           <div className={style.NavButtonsParrent}>
-            <button className={style.logButton}>LOG IN</button>
-            <button className={style.regButton}>SIGN UP</button>
+            <Link href={"/"} className={style.logButton}>
+              LOG IN
+            </Link>
+            <Link href={"/SignUp"} className={style.regButton}>
+              SIGN UP
+            </Link>
           </div>
         </div>
       </div>

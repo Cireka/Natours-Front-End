@@ -1,7 +1,6 @@
 "use client";
 import { Fragment } from "react";
 import style from "./TourBox.module.css";
-import cover from "../../../public/tours/tour-1-cover.jpg";
 import { SlLocationPin } from "react-icons/sl";
 import { BsFlag } from "react-icons/bs";
 import { AiOutlineCalendar } from "react-icons/ai";
