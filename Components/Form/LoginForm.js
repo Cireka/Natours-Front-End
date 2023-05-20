@@ -1,23 +1,20 @@
 "use client";
-import style from "./RegisterInput.module.css";
+import style from "./LoginForm.module.css";
 import { useState, useEffect } from "react";
-import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
+import Cookies from "js-cookie";
 
-export default function RegisterInput() {
+export default function LoginForm() {
   const route = useRouter();
   const maxAge = 9;
   const [userInfo, setUserInfo] = useState({
-    name: "",
     email: "",
     password: "",
-    passwordConfirm: "",
   });
   const [userToken, setUserToken] = useState(undefined);
-
-  function SubmitHanddler(event) {
+  const SubmitHanddler = (event) => {
     event.preventDefault();
-    fetch("https://natours-app-xp62.onrender.com/api/v1/users/signup", {
+    fetch("https://natours-app-xp62.onrender.com/api/v1/users/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -34,7 +31,7 @@ export default function RegisterInput() {
       .catch((err) => {
         console.log(err);
       });
-  }
+  };
   useEffect(() => {
     if (userToken) {
       // send token to backend and see if it is valid
@@ -50,11 +47,6 @@ export default function RegisterInput() {
       route.push("/");
     }
   }, [userToken]);
-
-  const nameHandller = (event) => {
-    const input = event.target.value;
-    setUserInfo({ ...userInfo, name: input });
-  };
   const emailHandller = (event) => {
     const input = event.target.value;
     setUserInfo({ ...userInfo, email: input });
@@ -63,26 +55,13 @@ export default function RegisterInput() {
     const input = event.target.value;
     setUserInfo({ ...userInfo, password: input });
   };
-  const passwordConfirmHandller = (event) => {
-    const input = event.target.value;
-    setUserInfo({ ...userInfo, passwordConfirm: input });
-  };
   return (
     <form onSubmit={SubmitHanddler}>
       <div className={style.InputParrent}>
         <div className={style.titleParrent}>
-          <h2>Create Your Account!</h2>
+          <h2>Log into your account</h2>
         </div>
         <div className={style.fromContainer}>
-          <div>
-            <label>Your Name</label>
-            <input
-              onChange={nameHandller}
-              required
-              type={"text"}
-              className={style.Input}
-            ></input>
-          </div>
           <div>
             <label>E-Mail address</label>
             <input
@@ -104,19 +83,8 @@ export default function RegisterInput() {
               className={style.Input}
             ></input>
           </div>
-          <div>
-            <label>Confirm Password</label>
-            <input
-              onChange={passwordConfirmHandller}
-              minLength="8"
-              required
-              placeholder="********"
-              type={"password"}
-              className={style.Input}
-            ></input>
-          </div>
           <button type={"submit"} className={style.SubmitButton}>
-            Sign Up
+            Login
           </button>
         </div>
       </div>

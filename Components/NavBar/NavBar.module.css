@@ -31,6 +31,8 @@
   flex: 1; /* Take up remaining space */
   display: flex;
   justify-content: flex-start; /* Align buttons to the left */
+  align-items: center;
+  gap: 1.8rem;
 }
 .HomeLinkParrent > a {
   text-decoration: none;
@@ -65,4 +67,14 @@
   border: 1px solid white;
   border-radius: 2.4rem;
   padding: 1.4rem 3rem;
+}
+.ProfileIcon {
+  width: 4.5rem;
+  height: auto;
+  color: #28b487;
+  -webkit-transition: all 0.3s;
+}
+.ProfileIcon:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
 }

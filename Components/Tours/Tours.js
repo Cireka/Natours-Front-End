@@ -29,7 +29,6 @@ export default function Tours() {
     <div className={style.ToursSectionParrent}>
       {data &&
         data.map((item) => {
-          console.log(data);
           return (
             <TourBox
               key={item.id}
