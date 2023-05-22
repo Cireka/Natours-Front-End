@@ -1,0 +1,54 @@
+.AccountParrent {
+  width: 140rem;
+  height: 60rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 0.25fr 1fr;
+  border-radius: 3px;
+}
+
+.AccountSectionsParrent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3.2rem;
+  padding-top: 4.2rem;
+  background: linear-gradient(
+    179.1deg,
+    rgb(129, 204, 104) 2.3%,
+    rgb(43, 170, 96) 98.3%
+  );
+}
+.AccountSectionsParrent > h2 {
+  position: relative;
+  padding-left: 20%;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  color: #e6e6e6;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+.AccountSectionsParrent > h2:hover {
+  color: #ffff;
+}
+.SelectedSection::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 0.4rem;
+  height: 3.8rem;
+  background-color: white;
+}
+
+.AccountConfigurationParrent {
+  background-color: #ffff;
+  display: flex;
+  justify-content: center;
+}

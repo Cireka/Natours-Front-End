@@ -78,3 +78,6 @@
   cursor: pointer;
   transform: translateY(-3px);
 }
+.DissabledProfileIcon {
+  display: none;
+}
