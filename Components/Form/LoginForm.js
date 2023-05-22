@@ -11,6 +11,8 @@ export default function LoginForm() {
     email: "",
     password: "",
   });
+  const [regError, setregError] = useState(false);
+
   const [userToken, setUserToken] = useState(undefined);
   const SubmitHanddler = (event) => {
     event.preventDefault();
@@ -26,6 +28,10 @@ export default function LoginForm() {
         console.log(data);
         if (data.status === "success") {
           setUserToken(data.message);
+        } else if (data.status === "fail") {
+          setregError("Email or Password is incorrect");
+        } else {
+          setregError(false);
         }
       })
       .catch((err) => {
@@ -83,6 +89,7 @@ export default function LoginForm() {
               className={style.Input}
             ></input>
           </div>
+          {regError && <h2 className={style.ErrorMessage}>{regError}</h2>}
           <button type={"submit"} className={style.SubmitButton}>
             Login
           </button>

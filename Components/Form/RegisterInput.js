@@ -14,6 +14,7 @@ export default function RegisterInput() {
     passwordConfirm: "",
   });
   const [userToken, setUserToken] = useState(undefined);
+  const [regError, setregError] = useState(false);
 
   function SubmitHanddler(event) {
     event.preventDefault();
@@ -29,6 +30,12 @@ export default function RegisterInput() {
         console.log(data);
         if (data.status === "success") {
           setUserToken(data.message);
+        } else if (data.message.indexOf('Duplicate Key Value: "email:') === 0) {
+          setregError("Email Already Exists.");
+        } else if (data.message.indexOf("Passwords Are Not The Same!") === 0) {
+          setregError(data.message);
+        } else {
+          setregError(false);
         }
       })
       .catch((err) => {
@@ -115,6 +122,7 @@ export default function RegisterInput() {
               className={style.Input}
             ></input>
           </div>
+          {regError && <h2 className={style.ErrorMessage}>{regError}</h2>}
           <button type={"submit"} className={style.SubmitButton}>
             Sign Up
           </button>
