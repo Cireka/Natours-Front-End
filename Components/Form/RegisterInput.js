@@ -122,7 +122,7 @@ export default function RegisterInput() {
               className={style.Input}
             ></input>
           </div>
-          {regError && <h2 className={style.ErrorMessage}>{regError}</h2>}
+          {regError && <ErrorMessage message={regError} />}
           <button type={"submit"} className={style.SubmitButton}>
             Sign Up
           </button>

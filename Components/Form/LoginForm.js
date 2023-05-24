@@ -3,6 +3,7 @@ import style from "./LoginForm.module.css";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
+import ErrorMessage from "../UI/ErrorMessage";
 
 export default function LoginForm() {
   const route = useRouter();
@@ -89,7 +90,7 @@ export default function LoginForm() {
               className={style.Input}
             ></input>
           </div>
-          {regError && <h2 className={style.ErrorMessage}>{regError}</h2>}
+          {regError && <ErrorMessage message={regError} />}
           <button type={"submit"} className={style.SubmitButton}>
             Login
           </button>

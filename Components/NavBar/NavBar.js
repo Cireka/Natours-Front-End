@@ -22,7 +22,11 @@ export default function NavBar() {
   };
   const router = useRouter();
   const ProfileHandler = () => {
-    router.push(`/Account/${token}`);
+    if (Cookies.get("jwt")) {
+      router.push(`/Account/${token}`);
+    } else {
+      router.refresh();
+    }
   };
 
   return (

@@ -94,8 +94,3 @@
 .SubmitButton:active {
   background-color: #449e62;
 }
-.ErrorMessage {
-  color: #b70404;
-  font-weight: 300;
-}
-

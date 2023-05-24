@@ -63,14 +63,20 @@ export default function Account({ params }) {
           </h2>
         </div>
         <div className={style.AccountConfigurationParrent}>
-          <AccountSettings
-            // image={userData?.image}
-            title={"Your Account Settings"}
-            topLabel={"Name"}
-            topInputPlaceValue={userData?.name}
-            bottomLabel={"Email"}
-            bottomInputPlaceValue={userData?.email}
-          />
+          <div>
+            <AccountSettings
+              title={"Your Account Settings"}
+              topLabel={"Name"}
+              topInputPlaceValue={userData?.name}
+              bottomLabel={"Email"}
+              bottomInputPlaceValue={userData?.email}
+            />
+            <AccountSettings
+              title={"PASSWORD CHANGE"}
+              topLabel={"Current Password"}
+              bottomLabel={"New Password"}
+            />
+          </div>
         </div>
       </div>
     </Fragment>
