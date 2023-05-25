@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-
 import Auth from "./Components/Auth/Auth";
 
 export default async function middleware(req) {
@@ -9,9 +8,11 @@ export default async function middleware(req) {
 
   const valid = await Auth({ jwt });
 
+
+
   if (
     valid.status === "fail" &&
-    req.url.includes("http://localhost:3000/Account")
+    req.url.includes(`http://localhost:3000/Account/`)
   ) {
     return NextResponse.redirect("http://localhost:3000");
   } else if (
