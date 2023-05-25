@@ -49,6 +49,8 @@
 
 .AccountConfigurationParrent {
   background-color: #ffff;
+}
+.AccoungConfigurationContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;

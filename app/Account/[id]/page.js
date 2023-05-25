@@ -16,7 +16,6 @@ export default function Account({ params }) {
   };
 
   useEffect(() => {
-    console.log(id);
     fetch("https://natours-app-xp62.onrender.com/api/v1/users/me", {
       headers: {
         "Content-Type": "application/json",
@@ -25,7 +24,6 @@ export default function Account({ params }) {
     })
       .then((res) => res.json()) // Parse response as JSON
       .then((data) => {
-        console.log(data);
         setUserData(data.data);
       })
       .catch((err) => {
@@ -64,7 +62,7 @@ export default function Account({ params }) {
           </h2>
         </div>
         <div className={style.AccountConfigurationParrent}>
-          <div>
+          <div className={style.AccoungConfigurationContainer}>
             <AccountSettings
               title={"Your Account Settings"}
               topLabel={"Name"}
@@ -73,6 +71,7 @@ export default function Account({ params }) {
               bottomInputPlaceValue={userData?.email}
             />
             <AccountPassword
+              id={id}
               title={"PASSWORD CHANGE"}
               topLabel={"Current Password"}
               bottomLabel={"New Password"}

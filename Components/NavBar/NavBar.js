@@ -1,5 +1,5 @@
 "use client";
-import { Fragment, useEffect } from "react";
+import { Fragment, useState, useEffect } from "react";
 import style from "./NavBar.module.css";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,13 +7,13 @@ import Logo from "../../public/logo-white.png";
 import Cookies from "js-cookie";
 import { CgProfile } from "react-icons/cg";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
 
 export default function NavBar() {
   const [token, setToken] = useState(null);
   useEffect(() => {
     setToken(Cookies.get("jwt"));
   }, [Cookies.get("jwt")]);
+  // const token = Cookies.get("jwt");
 
   const LogOutHandler = () => {
     Cookies.remove("jwt");
@@ -22,7 +22,6 @@ export default function NavBar() {
   };
   const router = useRouter();
   const ProfileHandler = () => {
-    
     router.push(`/Account/${token}`);
   };
 

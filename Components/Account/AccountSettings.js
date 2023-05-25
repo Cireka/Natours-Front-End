@@ -1,11 +1,9 @@
 import style from "./AccountSettings.module.css";
 import Cookies from "js-cookie";
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
 import ErrorMessage from "../UI/ErrorMessage";
 
 export default function AccountSettings(props) {
-  const route = useRouter();
   const token = Cookies.get("jwt");
   const [userData, setUserData] = useState({
     name: "",
@@ -19,7 +17,7 @@ export default function AccountSettings(props) {
     setUserData({ name: name, email: email });
   }, [props.bottomInputPlaceValue, props.topInputPlaceValue]);
 
-  console.log(userData);
+  // console.log(userData);
   const nameChangeHandler = (event) => {
     const name = event.target.value;
     setUserData({ ...userData, name: name });

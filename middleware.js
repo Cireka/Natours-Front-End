@@ -4,11 +4,7 @@ import Auth from "./Components/Auth/Auth";
 export default async function middleware(req) {
   const jwt = req.cookies.get("jwt")?.value;
 
-  // If none of the redirect conditions are met, allow the request to continue
-
   const valid = await Auth({ jwt });
-
-
 
   if (
     valid.status === "fail" &&

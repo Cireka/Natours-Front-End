@@ -26,7 +26,6 @@ export default function LoginForm() {
     })
       .then((res) => res.json()) // Parse response as JSON
       .then((data) => {
-        console.log(data);
         if (data.status === "success") {
           setUserToken(data.message);
         } else if (data.status === "fail") {
@@ -45,7 +44,7 @@ export default function LoginForm() {
       // if it is we set it inside the cookie and than go to page
       // on that page we can already render personal information because user was validated by our backend
       // but we keep token in storage just in case we need to make post request with it to secure api
-      console.log("cookie set");
+
       Cookies.set("jwt", userToken, {
         expires: maxAge,
         path: "/", // Adjust the path based on your requirements
