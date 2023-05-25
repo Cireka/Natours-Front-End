@@ -4,6 +4,7 @@ import style from "./Account.module.css";
 import NavBar from "@/Components/NavBar/NavBar";
 import { useState, useEffect } from "react";
 import AccountSettings from "@/Components/Account/AccountSettings";
+import AccountPassword from "@/Components/Account/AccountPassword";
 
 export default function Account({ params }) {
   const id = params.id;
@@ -71,7 +72,7 @@ export default function Account({ params }) {
               bottomLabel={"Email"}
               bottomInputPlaceValue={userData?.email}
             />
-            <AccountSettings
+            <AccountPassword
               title={"PASSWORD CHANGE"}
               topLabel={"Current Password"}
               bottomLabel={"New Password"}

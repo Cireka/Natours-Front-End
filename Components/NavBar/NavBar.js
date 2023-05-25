@@ -16,17 +16,13 @@ export default function NavBar() {
   }, [Cookies.get("jwt")]);
 
   const LogOutHandler = () => {
-    window.location.reload();
     Cookies.remove("jwt");
     router.push("/");
+    router.refresh();
   };
   const router = useRouter();
   const ProfileHandler = () => {
-    if (Cookies.get("jwt")) {
-      router.push(`/Account/${token}`);
-    } else {
-      router.refresh();
-    }
+    router.push(`/Account/${token}`);
   };
 
   return (
