@@ -1,7 +1,7 @@
 "use client";
 import TourBox from "../Reusabel Ui/TourBox/TourBox";
 import style from "./Tours.module.css";
-import getAllTours from "@/app/Data Fetching/All Tours/getAllTours";
+import getAllTours from "@/app/Data Fetching/getAllTours";
 import { useState, useEffect } from "react";
 
 export default function Tours() {
@@ -15,10 +15,12 @@ export default function Tours() {
   };
 
   const [data, setData] = useState("");
+
   async function getTours() {
     const data = await getAllTours(
       "https://natours-app-xp62.onrender.com/api/v1/tours"
     );
+    console.log(data.data.doc);
     setData(data.data.doc);
   }
   useEffect(() => {
@@ -44,6 +46,7 @@ export default function Tours() {
               TourRatings={item.ratingsQuantity}
               TourName={item.name}
               Image={item.imageCover}
+              id={item._id}
             />
           );
         })}

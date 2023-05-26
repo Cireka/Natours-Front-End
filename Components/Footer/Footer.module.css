@@ -1,0 +1,30 @@
+.FooterParrent {
+  max-width: 180rem;
+  margin: 0 auto;
+  margin-top: 6.2rem;
+  padding: 3rem;
+}
+.FooterContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Image {
+  width: 150px;
+  height: auto;
+}
+.LinksParrent {
+  display: flex;
+  gap: 2.8rem;
+}
+
+.LinksParrent > * {
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: #777;
+  text-decoration: none;
+  transition: ease-in-out 0.3s;
+}
+.LinksParrent > *:hover {
+  color: #55c57a;
+}

@@ -36,7 +36,6 @@ export default function AccountPassword(props) {
     })
       .then((res) => res.json()) // Parse response as JSON
       .then((data) => {
-        console.log(data);
         if (data.status === "success") {
           const jwt = data.message;
           Cookies.set("jwt", jwt, {
@@ -45,6 +44,8 @@ export default function AccountPassword(props) {
             secure: true,
           });
           route.push(`/Account/${jwt}`);
+        } else if (data.message === "Invalid Token Please Log In Again") {
+          route.push("/");
         }
       })
       .catch((err) => {

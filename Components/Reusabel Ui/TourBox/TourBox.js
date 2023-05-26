@@ -6,8 +6,13 @@ import { BsFlag } from "react-icons/bs";
 import { AiOutlineCalendar } from "react-icons/ai";
 import { BiUser } from "react-icons/bi";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function TourBox(props) {
+  const route = useRouter();
+  const DetailedTourHanddler = () => {
+    route.push(`/Tour/${props.id}`);
+  };
   return (
     <Fragment>
       <div className={style.TourBox}>
@@ -61,7 +66,12 @@ export default function TourBox(props) {
                 {props.TourRatings})
               </p>
             </div>
-            <button className={style.DetailsButton}>Details</button>
+            <button
+              onClick={DetailedTourHanddler}
+              className={style.DetailsButton}
+            >
+              Details
+            </button>
           </div>
         </div>
       </div>
