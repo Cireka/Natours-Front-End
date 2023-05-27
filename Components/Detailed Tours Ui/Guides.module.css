@@ -1,0 +1,16 @@
+.GuidesParrent {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.4rem;
+}
+.GuidesParrent > img {
+  border-radius: 50%;
+}
+.GuidesParrent > h2 {
+  text-transform: uppercase;
+}
+.GuidesParrent > p {
+  font-size: 1.4rem;
+  font-weight: 300;
+}

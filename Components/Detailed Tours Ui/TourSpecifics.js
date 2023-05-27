@@ -2,6 +2,7 @@ import style from "./TourSpecifics.module.css";
 import { AiOutlineCalendar, AiOutlineStar } from "react-icons/ai";
 import { BiTrendingUp } from "react-icons/bi";
 import { FiUser } from "react-icons/fi";
+import Guides from "./Guides";
 
 export default function TourSpecifics(props) {
   const dateConverter = (DateToConvert) => {
@@ -36,7 +37,21 @@ export default function TourSpecifics(props) {
             <div>
               <AiOutlineStar />
               <p>RATING</p>
-              <span>{props.rating}</span>
+              <span>
+                {props.rating} / {props.ratingQuantity}
+              </span>
+            </div>
+            <div className={style.GuidesParrent}>
+              <h2>Your Tour Guides</h2>
+              {props.guides?.map((item) => {
+                return (
+                  <Guides
+                    guideImg={item.photo}
+                    guideRole={item.role}
+                    guideName={item.name}
+                  />
+                );
+              })}
             </div>
           </div>
         </div>

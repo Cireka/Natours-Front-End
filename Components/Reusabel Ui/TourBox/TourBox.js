@@ -23,6 +23,7 @@ export default function TourBox(props) {
             </h2>
             <span className={style.overlay} />
             <Image
+              unoptimized={true}
               priority={1}
               alt="Cover Photo For The Tour"
               quality={100}
