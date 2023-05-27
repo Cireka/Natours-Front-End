@@ -1,25 +1,43 @@
 "use client";
+import TourDescription from "@/Components/Detailed Tours Ui/TourDescription";
+import Footer from "@/Components/Footer/Footer";
 import NavBar from "@/Components/NavBar/NavBar";
-import { Fragment, useEffect } from "react";
+import { Fragment, useEffect, useState } from "react";
+import getTour from "@/app/Data Fetching/getTour";
+import TourSpecifics from "@/Components/Detailed Tours Ui/TourSpecifics";
 
 export default function Tour({ params }) {
+  const [tourData, setTourData] = useState();
   const id = params.id;
 
+  async function getTours() {
+    const data = await getTour(
+      `https://natours-app-xp62.onrender.com/api/v1/tours/${id}`
+    );
+    setTourData(data.data);
+  }
   useEffect(() => {
-    console.log(id);
-    fetch(`https://natours-app-xp62.onrender.com/api/v1/tours/${id}`)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    getTours();
   }, []);
 
+  console.log(tourData);
   return (
     <Fragment>
       <NavBar />
+      <TourDescription
+        TourName={`${tourData?.name} Tour`}
+        imageCover={tourData?.imageCover}
+      />
+      <TourSpecifics
+        name={tourData?.name}
+        description={tourData?.description}
+        date={tourData?.startDates[0]}
+        difficulty={tourData?.difficulty}
+        participants={tourData?.maxGroupSize}
+        rating={tourData?.ratingAvrage}
+      />
+      {/* <TourBooking /> */}
+      <Footer />
     </Fragment>
   );
 }

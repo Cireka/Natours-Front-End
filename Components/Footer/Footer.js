@@ -12,6 +12,7 @@ export default function Footer() {
           height={30}
           src={"/logo-green.png"}
         />
+
         <div className={style.LinksParrent}>
           <Link href={"/"}>About us</Link>
           <Link href={"/"}>Download apps</Link>
@@ -19,6 +20,9 @@ export default function Footer() {
           <Link href={"/"}>Careers</Link>
           <Link href={"/"}>Contact</Link>
         </div>
+      </div>
+      <div>
+        <p className={style.FooterPar}>© by Lakshman Gope.</p>
       </div>
     </div>
   );

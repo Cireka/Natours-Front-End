@@ -5,6 +5,7 @@ import NavBar from "@/Components/NavBar/NavBar";
 import { useState, useEffect } from "react";
 import AccountSettings from "@/Components/Account/AccountSettings";
 import AccountPassword from "@/Components/Account/AccountPassword";
+import Footer from "@/Components/Footer/Footer";
 
 export default function Account({ params }) {
   const id = params.id;
@@ -79,6 +80,7 @@ export default function Account({ params }) {
           </div>
         </div>
       </div>
+      <Footer />
     </Fragment>
   );
 }

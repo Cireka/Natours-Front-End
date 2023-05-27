@@ -1,8 +1,9 @@
 .FooterParrent {
   max-width: 180rem;
   margin: 0 auto;
-  margin-top: 6.2rem;
   padding: 3rem;
+  position: sticky;
+  top: 100%;
 }
 .FooterContainer {
   display: flex;
@@ -27,4 +28,9 @@
 }
 .LinksParrent > *:hover {
   color: #55c57a;
+}
+.FooterPar {
+  margin-top: 1.8rem;
+  font-size: 1.4rem;
+  text-align: end;
 }
