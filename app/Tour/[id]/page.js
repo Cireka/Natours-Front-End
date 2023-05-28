@@ -6,6 +6,7 @@ import { Fragment, useEffect, useState } from "react";
 import getTour from "@/app/Data Fetching/getTour";
 import TourSpecifics from "@/Components/Detailed Tours Ui/TourSpecifics";
 import TourGallery from "@/Components/Detailed Tours Ui/TourGallery";
+import TourMap from "@/Components/Detailed Tours Ui/TourMap";
 
 export default function Tour({ params }) {
   const [tourData, setTourData] = useState();
@@ -44,7 +45,7 @@ export default function Tour({ params }) {
         imageTwo={tourData?.images[1]}
         imageThree={tourData?.images[2]}
       />
-      {/* <TourBooking /> */}
+      <TourMap locations={tourData?.locations} />
       <Footer />
     </Fragment>
   );

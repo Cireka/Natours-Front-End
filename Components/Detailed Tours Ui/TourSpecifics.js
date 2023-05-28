@@ -46,6 +46,7 @@ export default function TourSpecifics(props) {
               {props.guides?.map((item) => {
                 return (
                   <Guides
+                    key={item.id}
                     guideImg={item.photo}
                     guideRole={item.role}
                     guideName={item.name}

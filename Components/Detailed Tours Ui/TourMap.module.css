@@ -1,12 +1,7 @@
-.TourGallerySection {
+.MapSection {
   width: 97%;
   margin: 0 auto;
-  margin-top: -32.2rem;
-}
-.TourGalleryParrent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: -10rem;
   clip-path: polygon(
     50% 8.88%,
     100% 0%,
