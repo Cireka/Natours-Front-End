@@ -44,6 +44,7 @@ export default function TourMap(props) {
             props.locations[0].coordinates[0],
           ]}
           zoom={5}
+          minZoom={5}
           style={{
             height: "600px",
             marginBottom: "90px",

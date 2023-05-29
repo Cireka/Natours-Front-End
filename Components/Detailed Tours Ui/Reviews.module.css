@@ -12,12 +12,8 @@
   );
 }
 .ReviewsParrent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 70rem;
-  gap: 6.2rem;
-
+  padding-top: 21rem;
   background: -webkit-gradient(
     linear,
     left top,

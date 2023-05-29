@@ -8,6 +8,7 @@ import TourSpecifics from "@/Components/Detailed Tours Ui/TourSpecifics";
 import TourGallery from "@/Components/Detailed Tours Ui/TourGallery";
 import TourMap from "@/Components/Detailed Tours Ui/TourMap";
 import Reviews from "@/Components/Detailed Tours Ui/Reviews";
+import TourBook from "@/Components/Detailed Tours Ui/TourBook";
 
 export default function Tour({ params }) {
   const [tourData, setTourData] = useState();
@@ -50,6 +51,7 @@ export default function Tour({ params }) {
       />
       <TourMap locations={tourData?.locations} />
       <Reviews reviews={tourData?.reviews} />
+      <TourBook />
       <Footer />
     </Fragment>
   );

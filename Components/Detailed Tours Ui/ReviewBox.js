@@ -19,7 +19,9 @@ export default function ReviewBox(props) {
         <h2>{props.name}</h2>
       </div>
       <p>{props.review}</p>
-      <ReviewStars rating={rating} />
+      <div className={style.ratingsParrent}>
+        <ReviewStars rating={rating} />
+      </div>
     </div>
   );
 }
