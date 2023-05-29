@@ -5,4 +5,5 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 7rem;
+  margin-bottom: 8.2rem;
 }

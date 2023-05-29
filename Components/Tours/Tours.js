@@ -28,7 +28,7 @@ export default function Tours() {
   }, []);
 
   return (
-    <div className={style.ToursSectionParrent}>
+    <section className={style.ToursSectionParrent}>
       {data &&
         data.map((item) => {
           return (
@@ -50,6 +50,6 @@ export default function Tours() {
             />
           );
         })}
-    </div>
+    </section>
   );
 }

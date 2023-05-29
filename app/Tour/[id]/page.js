@@ -7,6 +7,7 @@ import getTour from "@/app/Data Fetching/getTour";
 import TourSpecifics from "@/Components/Detailed Tours Ui/TourSpecifics";
 import TourGallery from "@/Components/Detailed Tours Ui/TourGallery";
 import TourMap from "@/Components/Detailed Tours Ui/TourMap";
+import Reviews from "@/Components/Detailed Tours Ui/Reviews";
 
 export default function Tour({ params }) {
   const [tourData, setTourData] = useState();
@@ -29,6 +30,8 @@ export default function Tour({ params }) {
       <TourDescription
         TourName={`${tourData?.name} Tour`}
         imageCover={tourData?.imageCover}
+        duration={tourData?.duration}
+        location={tourData?.startLocation.description}
       />
       <TourSpecifics
         name={tourData?.name}
@@ -46,6 +49,7 @@ export default function Tour({ params }) {
         imageThree={tourData?.images[2]}
       />
       <TourMap locations={tourData?.locations} />
+      <Reviews reviews={tourData?.reviews} />
       <Footer />
     </Fragment>
   );

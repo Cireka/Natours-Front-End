@@ -1,0 +1,12 @@
+.grayStar,
+.greenStar {
+  width: 25px;
+  height: auto;
+}
+
+.greenStar {
+  color: #55c57a;
+}
+.grayStar {
+  color: gray;
+}

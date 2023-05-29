@@ -61,3 +61,26 @@
   left: 50%;
   z-index: 10;
 }
+.SmallinfoParrent {
+  width: 100%;
+  font-weight: 300;
+  font-size: 1.8rem;
+  color: #fff;
+  left: 50%;
+  top: 130%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+}
+.SmallinfoParrent > div {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.icon {
+  width: 2.2rem;
+  height: auto;
+}

@@ -1,0 +1,27 @@
+.reviewBoxParrent {
+  width: 32rem;
+  height: 28rem;
+  background-color: #f7f7f7;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+}
+.reviewBoxParrent > div > h2 {
+  font-size: 2.2rem;
+}
+.photo {
+  border-radius: 50%;
+}
+.reviewBoxParrent > p {
+  font-size: 1.4rem;
+  line-height: 2;
+  font-style: italic;
+  font-weight: 400;
+}
+.userParrent {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}

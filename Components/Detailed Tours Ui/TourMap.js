@@ -1,7 +1,7 @@
 import style from "./TourMap.module.css";
-import { Popup } from "react-leaflet";
+import { Tooltip } from "react-leaflet";
 import { Marker } from "react-leaflet";
-import { FaMapMarkerAlt } from "react-icons/fa";
+import "leaflet/dist/leaflet.css";
 
 // import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer } from "react-leaflet";
@@ -25,18 +25,15 @@ export default function TourMap(props) {
     ...(locations?.map((item) => ({
       position: [item.coordinates[1], item.coordinates[0]],
       text: item.description,
+      day: item.day,
     })) ?? []),
   ];
-
+  console.log(props.locations);
   const customIcon = L.icon({
     iconUrl: "/pin.PNG", // Path to your custom icon image
     iconSize: [36, 42], // Size of the icon
     iconAnchor: [16, 32], // Anchor point of the icon (relative to its top-left corner)
   });
-  // const startCords = [
-  //   props.locations[0].coordinates[1],
-  //   props.locations[0].coordinates[0],
-  // ];
 
   return (
     <div className={style.MapSection}>
@@ -46,8 +43,7 @@ export default function TourMap(props) {
             props.locations[0].coordinates[1],
             props.locations[0].coordinates[0],
           ]}
-          zoom={13}
-          scrollWheelZoom={false}
+          zoom={5}
           style={{
             height: "600px",
             marginBottom: "90px",
@@ -60,7 +56,15 @@ export default function TourMap(props) {
           />
           {markers.map((marker, index) => (
             <Marker key={index} position={marker.position} icon={customIcon}>
-              <Popup>{marker.text}</Popup>
+              <Tooltip
+                className={style.CustomTooltip}
+                direction="right"
+                offset={[0, 0]}
+                opacity={1}
+                permanent
+              >
+                day{marker.day}:{marker.text}
+              </Tooltip>
             </Marker>
           ))}
         </MapContainer>
