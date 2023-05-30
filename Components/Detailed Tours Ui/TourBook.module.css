@@ -1,10 +1,93 @@
 .BookTourSection {
   width: 97%;
   margin: 0 auto;
+  margin-top: 14.2rem;
+  margin-bottom: 8.2rem;
+  display: flex;
+  justify-content: center;
 }
 .BookTourBox {
-  width: 60rem;
-  height: 30rem;
+  padding: 0 1.2rem;
+  overflow-x: hidden;
+  position: relative;
+  box-shadow: 0px 0px 14px -5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 14px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 14px -5px rgba(0, 0, 0, 0.75);
+  width: 80rem;
+  height: 20rem;
   background-color: #f3f3f3;
-  border-radius: 4px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2.2rem;
+}
+
+.image1,
+.image2,
+.image3 {
+  height: 15rem;
+  width: 15rem;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 1rem 0.5rem 3rem rgba(0, 0, 0, 0.15);
+  box-shadow: 1rem 0.5rem 3rem rgba(0, 0, 0, 0.15);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.image1 {
+  left: -85px;
+  z-index: 10;
+}
+.image2 {
+  left: -45px;
+  z-index: 9;
+}
+.image3 {
+  left: -10px;
+  z-index: 8;
+}
+.title > h2 {
+  padding-left: 6.2rem;
+  font-size: 2.25rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#7dd56f),
+    to(#28b487)
+  );
+  background-image: linear-gradient(to right, #7dd56f, #28b487);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.1rem;
+  line-height: 1.3;
+}
+.title > p {
+  padding-left: 6.2rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.Button {
+  font-size: 1.6rem;
+  padding: 1.4rem 3rem;
+  border-radius: 10rem;
+  text-transform: uppercase;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  background-color: #55c57a;
+  color: #fff;
+}
+.Button:hover {
+  background-color: #4db16e;
+}
+.Button:active {
+  background-color: #55c57a;
 }

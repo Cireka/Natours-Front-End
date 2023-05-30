@@ -8,6 +8,7 @@ import ErrorMessage from "../UI/ErrorMessage";
 export default function LoginForm() {
   const route = useRouter();
   const maxAge = 9;
+  const [buttonText, setButtonText] = useState("Login");
   const [userInfo, setUserInfo] = useState({
     email: "",
     password: "",
@@ -17,6 +18,7 @@ export default function LoginForm() {
   const [userToken, setUserToken] = useState(undefined);
   const SubmitHanddler = (event) => {
     event.preventDefault();
+    setButtonText("PROCESSING...");
     fetch("https://natours-app-xp62.onrender.com/api/v1/users/login", {
       method: "POST",
       headers: {
@@ -28,8 +30,10 @@ export default function LoginForm() {
       .then((data) => {
         if (data.status === "success") {
           setUserToken(data.message);
+          setButtonText("Login");
         } else if (data.status === "fail") {
           setregError("Email or Password is incorrect");
+          setButtonText("Login");
         } else {
           setregError(false);
         }
@@ -91,7 +95,7 @@ export default function LoginForm() {
           </div>
           {regError && <ErrorMessage message={regError} />}
           <button type={"submit"} className={style.SubmitButton}>
-            Login
+            {buttonText}
           </button>
         </div>
       </div>

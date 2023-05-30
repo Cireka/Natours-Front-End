@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 export default function RegisterInput() {
   const route = useRouter();
   const maxAge = 9;
+  const [buttonText, setButtonText] = useState("Sign Up");
   const [userInfo, setUserInfo] = useState({
     name: "",
     email: "",
@@ -18,6 +19,7 @@ export default function RegisterInput() {
 
   function SubmitHanddler(event) {
     event.preventDefault();
+    setButtonText("PROCESSING...");
     fetch("https://natours-app-xp62.onrender.com/api/v1/users/signup", {
       method: "POST",
       headers: {
@@ -31,8 +33,10 @@ export default function RegisterInput() {
         if (data.status === "success") {
           setUserToken(data.message);
         } else if (data.message.indexOf('Duplicate Key Value: "email:') === 0) {
+          buttonText("Sign Up");
           setregError("Email Already Exists.");
         } else if (data.message.indexOf("Passwords Are Not The Same!") === 0) {
+          buttonText("Sign Up");
           setregError(data.message);
         } else {
           setregError(false);
@@ -124,7 +128,7 @@ export default function RegisterInput() {
           </div>
           {regError && <ErrorMessage message={regError} />}
           <button type={"submit"} className={style.SubmitButton}>
-            Sign Up
+            {buttonText}
           </button>
         </div>
       </div>

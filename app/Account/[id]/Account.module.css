@@ -1,10 +1,14 @@
+.AccountSection {
+  width: 97%;
+  margin: 0 auto;
+  margin-top: 6.2rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30rem;
+}
 .AccountParrent {
   width: 140rem;
-  height: 60rem;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  height: 70rem;
   display: grid;
   grid-template-columns: 0.25fr 1fr;
   border-radius: 3px;
@@ -48,7 +52,10 @@
 }
 
 .AccountConfigurationParrent {
+  max-height: 70rem;
+  overflow-y: scroll;
   background-color: #ffff;
+  padding-bottom: 3.2rem;
 }
 .AccoungConfigurationContainer {
   display: flex;

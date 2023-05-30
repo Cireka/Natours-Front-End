@@ -51,7 +51,11 @@ export default function Tour({ params }) {
       />
       <TourMap locations={tourData?.locations} />
       <Reviews reviews={tourData?.reviews} />
-      <TourBook />
+      <TourBook
+        imageTwo={tourData?.images[1]}
+        imageThree={tourData?.images[2]}
+        duration={tourData?.duration}
+      />
       <Footer />
     </Fragment>
   );

@@ -35,51 +35,53 @@ export default function Account({ params }) {
   return (
     <Fragment>
       <NavBar />
-      <div className={style.AccountParrent}>
-        <div className={style.AccountSectionsParrent}>
-          <h2
-            onClick={() => handleSectionClick(0)}
-            className={selectedSection === 0 ? style.SelectedSection : ""}
-          >
-            Settings
-          </h2>
-          <h2
-            onClick={() => handleSectionClick(1)}
-            className={selectedSection === 1 ? style.SelectedSection : ""}
-          >
-            My Bookings
-          </h2>
-          <h2
-            onClick={() => handleSectionClick(2)}
-            className={selectedSection === 2 ? style.SelectedSection : ""}
-          >
-            My Reviews
-          </h2>
-          <h2
-            onClick={() => handleSectionClick(3)}
-            className={selectedSection === 3 ? style.SelectedSection : ""}
-          >
-            Billing
-          </h2>
-        </div>
-        <div className={style.AccountConfigurationParrent}>
-          <div className={style.AccoungConfigurationContainer}>
-            <AccountSettings
-              title={"Your Account Settings"}
-              topLabel={"Name"}
-              topInputPlaceValue={userData?.name}
-              bottomLabel={"Email"}
-              bottomInputPlaceValue={userData?.email}
-            />
-            <AccountPassword
-              id={id}
-              title={"PASSWORD CHANGE"}
-              topLabel={"Current Password"}
-              bottomLabel={"New Password"}
-            />
+      <section className={style.AccountSection}>
+        <div className={style.AccountParrent}>
+          <div className={style.AccountSectionsParrent}>
+            <h2
+              onClick={() => handleSectionClick(0)}
+              className={selectedSection === 0 ? style.SelectedSection : ""}
+            >
+              Settings
+            </h2>
+            <h2
+              onClick={() => handleSectionClick(1)}
+              className={selectedSection === 1 ? style.SelectedSection : ""}
+            >
+              My Bookings
+            </h2>
+            <h2
+              onClick={() => handleSectionClick(2)}
+              className={selectedSection === 2 ? style.SelectedSection : ""}
+            >
+              My Reviews
+            </h2>
+            <h2
+              onClick={() => handleSectionClick(3)}
+              className={selectedSection === 3 ? style.SelectedSection : ""}
+            >
+              Billing
+            </h2>
+          </div>
+          <div className={style.AccountConfigurationParrent}>
+            <div className={style.AccoungConfigurationContainer}>
+              <AccountSettings
+                title={"Your Account Settings"}
+                topLabel={"Name"}
+                topInputPlaceValue={userData?.name}
+                bottomLabel={"Email"}
+                bottomInputPlaceValue={userData?.email}
+              />
+              <AccountPassword
+                id={id}
+                title={"PASSWORD CHANGE"}
+                topLabel={"Current Password"}
+                bottomLabel={"New Password"}
+              />
+            </div>
           </div>
         </div>
-      </div>
+      </section>
       <Footer />
     </Fragment>
   );

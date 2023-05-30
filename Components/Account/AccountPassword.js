@@ -7,6 +7,7 @@ export default function AccountPassword(props) {
   const route = useRouter();
   const maxAge = 9;
   const id = Cookies.get("jwt");
+  const [buttonText, setButtonText] = useState("SAVE SETTINGS");
   const [userData, setUserData] = useState({
     oldPassword: "",
     newPassword: "",
@@ -26,6 +27,7 @@ export default function AccountPassword(props) {
   };
   const SubmitHandler = (event) => {
     event.preventDefault();
+    setButtonText("PROCESSING...");
     fetch("https://natours-app-xp62.onrender.com/api/v1/users/updatePassword", {
       method: "PATCH",
       headers: {
@@ -36,6 +38,7 @@ export default function AccountPassword(props) {
     })
       .then((res) => res.json()) // Parse response as JSON
       .then((data) => {
+        setButtonText("SAVE SETTINGS");
         if (data.status === "success") {
           const jwt = data.message;
           Cookies.set("jwt", jwt, {

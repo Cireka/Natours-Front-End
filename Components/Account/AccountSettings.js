@@ -11,6 +11,8 @@ export default function AccountSettings(props) {
   });
   const [error, setError] = useState(undefined);
 
+  const [buttonText, setButtonText] = useState("SAVE SETTINGS");
+
   useEffect(() => {
     const name = props.topInputPlaceValue;
     const email = props.bottomInputPlaceValue;
@@ -28,6 +30,7 @@ export default function AccountSettings(props) {
   };
   const updateProfileHandler = (event) => {
     event.preventDefault();
+    setButtonText("PROCESSING...");
     if (token) {
       fetch("https://natours-app-xp62.onrender.com/api/v1/users/updateMe", {
         method: "PATCH",
@@ -41,6 +44,7 @@ export default function AccountSettings(props) {
       })
         .then((res) => res.json()) // Parse response as JSON
         .then((data) => {
+          setButtonText("SAVE SETTINGS");
           if (data.message === "Not Valid Email") {
             setError(data.message);
           } else if (data.message === "success") {
@@ -76,7 +80,7 @@ export default function AccountSettings(props) {
         {error && <ErrorMessage message={error} />}
         <div className={style.ButtonParrent}>
           <button type="submit" className={style.Button}>
-            Save Settings
+            {buttonText}
           </button>
         </div>
       </form>
