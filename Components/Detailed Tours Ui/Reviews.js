@@ -26,8 +26,8 @@ export default function Reviews(props) {
               return (
                 <ReviewBox
                   key={item.id}
-                  image={item?.User[0].photo}
-                  name={item?.User[0].name}
+                  image={item?.User[0]?.photo}
+                  name={item?.User[0]?.name}
                   review={item?.review}
                   rating={item?.rating}
                 />
