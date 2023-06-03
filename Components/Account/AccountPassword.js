@@ -7,6 +7,8 @@ export default function AccountPassword(props) {
   const route = useRouter();
   const maxAge = 9;
   const id = Cookies.get("jwt");
+
+  const [visible, setVissible] = useState(false);
   const [buttonText, setButtonText] = useState("SAVE SETTINGS");
   const [userData, setUserData] = useState({
     oldPassword: "",
@@ -25,7 +27,13 @@ export default function AccountPassword(props) {
       passwordConfirm: newPassword,
     });
   };
+  const refresh = (jwt) => {
+    setTimeout(() => {
+      route.push(`/Account/${jwt}`);
+    }, [5000]);
+  };
   const SubmitHandler = (event) => {
+    // Backend გასასწორებელია არასწორი პაროლზე ერორი მოაქვს და არა რესპონსი
     event.preventDefault();
     setButtonText("PROCESSING...");
     fetch("https://natours-app-xp62.onrender.com/api/v1/users/updatePassword", {
@@ -40,13 +48,14 @@ export default function AccountPassword(props) {
       .then((data) => {
         setButtonText("SAVE SETTINGS");
         if (data.status === "success") {
+          setVissible(true);
           const jwt = data.message;
           Cookies.set("jwt", jwt, {
             expires: maxAge,
             path: "/", // Adjust the path based on your requirements
             secure: true,
           });
-          route.push(`/Account/${jwt}`);
+          refresh(jwt);
         } else if (data.message === "Invalid Token Please Log In Again") {
           route.push("/");
         }
@@ -70,9 +79,12 @@ export default function AccountPassword(props) {
           <label>{props.bottomLabel}</label>
           <input onChange={newPasswordHandler} className={style.Input}></input>
         </div>
+        {visible && (
+          <p className={style.saveMessage}>Password Succesfully Saved!</p>
+        )}
         <div className={style.ButtonParrent}>
           <button type="submit" className={style.Button}>
-            Save Password
+            {buttonText}
           </button>
         </div>
       </form>

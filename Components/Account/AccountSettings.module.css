@@ -104,3 +104,8 @@
   display: flex;
   justify-content: flex-end;
 }
+.saveMessage {
+  margin-top: 1.2rem;
+  font-size: 1.4rem;
+  color: #55c57a;
+}

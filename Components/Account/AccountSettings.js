@@ -10,8 +10,8 @@ export default function AccountSettings(props) {
     email: "",
   });
   const [error, setError] = useState(undefined);
-
   const [buttonText, setButtonText] = useState("SAVE SETTINGS");
+  const [visible, setVissible] = useState(false);
 
   useEffect(() => {
     const name = props.topInputPlaceValue;
@@ -28,6 +28,7 @@ export default function AccountSettings(props) {
     const email = event.target.value;
     setUserData({ ...userData, email: email });
   };
+
   const updateProfileHandler = (event) => {
     event.preventDefault();
     setButtonText("PROCESSING...");
@@ -49,6 +50,7 @@ export default function AccountSettings(props) {
             setError(data.message);
           } else if (data.message === "success") {
             setError(undefined);
+            setVissible(true);
           }
           console.log(data);
         })
@@ -76,6 +78,9 @@ export default function AccountSettings(props) {
             defaultValue={props.bottomInputPlaceValue}
             className={style.Input}
           ></input>
+          {visible && (
+            <p className={style.saveMessage}>Settings Succesfully Saved!</p>
+          )}
         </div>
         {error && <ErrorMessage message={error} />}
         <div className={style.ButtonParrent}>

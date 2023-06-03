@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
 import ErrorMessage from "../UI/ErrorMessage";
+import Link from "next/link";
 
 export default function LoginForm() {
   const route = useRouter();
@@ -94,6 +95,9 @@ export default function LoginForm() {
             ></input>
           </div>
           {regError && <ErrorMessage message={regError} />}
+          <Link className={style.PasswordRecovery} href={"/Password-Recovery"}>
+            Forgot Password?
+          </Link>
           <button type={"submit"} className={style.SubmitButton}>
             {buttonText}
           </button>

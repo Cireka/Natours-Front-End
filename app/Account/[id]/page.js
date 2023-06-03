@@ -31,7 +31,7 @@ export default function Account({ params }) {
         console.log(err);
       });
   }, []);
-
+  console.log(userData);
   return (
     <Fragment>
       <NavBar />
