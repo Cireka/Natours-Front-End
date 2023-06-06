@@ -4,11 +4,26 @@ import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
 
 export default function TourBook(props) {
+  const tourId = props.tourId;
   const router = useRouter();
   const token = Cookies.get("jwt");
   const BookTourHandller = () => {
     if (token) {
-      // book Tour
+      fetch(
+        `https://natours-app-xp62.onrender.com/api/v1/bookings/checkout-session/${tourId}`,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          const url = data.session.url;
+          router.push(url);
+        })
+        .catch((err) => console.log(err));
     } else {
       router.push("/LogIn");
     }

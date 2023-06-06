@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 import AccountSettings from "@/Components/Account/AccountSettings";
 import AccountPassword from "@/Components/Account/AccountPassword";
 import Footer from "@/Components/Footer/Footer";
+import MyBookings from "@/Components/Account/MyBookings";
+import MyReviews from "@/Components/Account/MyReviews";
 
 export default function Account({ params }) {
   const id = params.id;
@@ -31,6 +33,8 @@ export default function Account({ params }) {
         console.log(err);
       });
   }, []);
+
+  const userId = userData?._id;
   console.log(userData);
   return (
     <Fragment>
@@ -50,35 +54,39 @@ export default function Account({ params }) {
             >
               My Bookings
             </h2>
-            <h2
+            {/* <h2
               onClick={() => handleSectionClick(2)}
               className={selectedSection === 2 ? style.SelectedSection : ""}
             >
               My Reviews
-            </h2>
-            <h2
+            </h2> */}
+            {/* <h2
               onClick={() => handleSectionClick(3)}
               className={selectedSection === 3 ? style.SelectedSection : ""}
             >
               Billing
-            </h2>
+            </h2> */}
           </div>
           <div className={style.AccountConfigurationParrent}>
-            <div className={style.AccoungConfigurationContainer}>
-              <AccountSettings
-                title={"Your Account Settings"}
-                topLabel={"Name"}
-                topInputPlaceValue={userData?.name}
-                bottomLabel={"Email"}
-                bottomInputPlaceValue={userData?.email}
-              />
-              <AccountPassword
-                id={id}
-                title={"PASSWORD CHANGE"}
-                topLabel={"Current Password"}
-                bottomLabel={"New Password"}
-              />
-            </div>
+            {selectedSection === 0 && (
+              <div className={style.AccoungConfigurationContainer}>
+                <AccountSettings
+                  title={"Your Account Settings"}
+                  topLabel={"Name"}
+                  topInputPlaceValue={userData?.name}
+                  bottomLabel={"Email"}
+                  bottomInputPlaceValue={userData?.email}
+                />
+                <AccountPassword
+                  id={id}
+                  title={"PASSWORD CHANGE"}
+                  topLabel={"Current Password"}
+                  bottomLabel={"New Password"}
+                />
+              </div>
+            )}
+            {selectedSection === 1 && <MyBookings />}
+            {/* {selectedSection === 2 && <MyReviews userId={userId} />} */}
           </div>
         </div>
       </section>

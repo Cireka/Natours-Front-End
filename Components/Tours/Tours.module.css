@@ -5,5 +5,35 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 7rem;
+  row-gap: 10rem;
   margin-bottom: 8.2rem;
+}
+@media (max-width: 1300px) {
+  .ToursSectionParrent {
+    grid-gap: 2rem;
+    padding: 0 5rem;
+    row-gap: 10rem !important;
+  }
+}
+
+@media (max-width: 1155px) {
+  .ToursSectionParrent {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+}
+
+@media (max-width: 937px) {
+  .ToursSectionParrent {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+}
+
+@media (max-width: 450px) {
+  .ToursSectionParrent {
+    grid-gap: 2rem;
+    padding: 0 1rem;
+    row-gap: 10rem !important;
+  }
 }

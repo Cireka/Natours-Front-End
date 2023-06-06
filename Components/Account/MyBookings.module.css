@@ -1,0 +1,22 @@
+.BookingsParrent {
+  padding: 3.2rem;
+  padding-top: 4.2rem;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 6.2rem;
+}
+
+.EmptyBookedParrent {
+  width: 100%;
+  height: 80%;
+  padding-top: 4.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.NoBookedTours {
+  font-weight: 400;
+  font-size: 2.8rem;
+  color: #3ebc93;
+}

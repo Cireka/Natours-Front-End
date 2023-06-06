@@ -39,7 +39,7 @@
   );
   background-image: linear-gradient(to right bottom, #7dd56f, #28b487);
 
-  opacity: 0.85;
+  opacity: 0.7;
   z-index: 1;
 }
 .DescriptionParrent {
@@ -180,4 +180,30 @@
   right: 2rem;
   width: 70%;
   z-index: 10;
+}
+
+@media (max-width: 384px) {
+  .TourBox {
+    width: 26rem;
+    height: 48rem;
+  }
+  .InfoParrent > p {
+    font-size: 1rem;
+  }
+  .StatsParrent > p {
+    color: #999;
+    font-size: 1rem;
+  }
+  .DetailsButton {
+    font-size: 1rem;
+    padding: 1.2rem 2.4rem;
+  }
+  .Title {
+    font-size: 2rem;
+  }
+
+  .DescriptionParrent > p {
+    line-height: 1.4;
+    font-size: 1.3rem;
+  }
 }

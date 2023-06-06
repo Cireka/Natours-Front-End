@@ -38,7 +38,7 @@ export default function TourSpecifics(props) {
               <AiOutlineStar />
               <p>RATING</p>
               <span>
-                {props.rating} / {props.ratingQuantity}
+                {props.rating?.toFixed(1)} / {props.ratingQuantity}
               </span>
             </div>
             <div className={style.GuidesParrent}>

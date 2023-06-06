@@ -63,7 +63,7 @@ export default function TourBox(props) {
                 <span>${props.TourPrice}</span> per person
               </p>
               <p>
-                <span>{props.TourAvrageRating.toFixed(1)}</span> rating (
+                <span>{props.TourAvrageRating?.toFixed(1)}</span> rating (
                 {props.TourRatings})
               </p>
             </div>

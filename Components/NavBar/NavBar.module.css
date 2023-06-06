@@ -81,3 +81,26 @@
 .DissabledProfileIcon {
   display: none;
 }
+@media (max-width: 554px) {
+  .NavBar {
+    padding: 0 2rem;
+  }
+}
+@media (max-width: 455px) {
+  .NavBar {
+    padding: 0 0.4rem;
+  }
+  .Image {
+    width: 3.5rem;
+    height: auto;
+  }
+  .ProfileIcon {
+    width: 3.5rem;
+    height: auto;
+  }
+  .AllTours,
+  .logButton,
+  .regButton {
+    font-size: 1.4rem;
+  }
+}
