@@ -84,3 +84,12 @@
   width: 2.2rem;
   height: auto;
 }
+
+@media (max-width: 695px) {
+  .HeadingTertirary {
+    width: 28rem;
+  }
+  .Title {
+    font-size: 3.2rem;
+  }
+}

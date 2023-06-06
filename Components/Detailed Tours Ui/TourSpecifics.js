@@ -18,28 +18,30 @@ export default function TourSpecifics(props) {
       <div className={style.TourSpecificsParrent}>
         <div className={style.SpecificsParrent}>
           <div className={style.DetailsParrent}>
-            <h2>QUICK FACTS</h2>
-            <div>
-              <AiOutlineCalendar />
-              <p>NEXT DATE</p>
-              <span>{dateConverter(props.date)}</span>
-            </div>
-            <div>
-              <BiTrendingUp />
-              <p>DIFFICULTY</p>
-              <span>{props.difficulty}</span>
-            </div>
-            <div>
-              <FiUser />
-              <p>PARTICIPANTS</p>
-              <span>{props.participants}</span>
-            </div>
-            <div>
-              <AiOutlineStar />
-              <p>RATING</p>
-              <span>
-                {props.rating?.toFixed(1)} / {props.ratingQuantity}
-              </span>
+            <div className={style.StatsParrent}>
+              <h2>QUICK FACTS</h2>
+              <div>
+                <AiOutlineCalendar />
+                <p>NEXT DATE</p>
+                <span>{dateConverter(props.date)}</span>
+              </div>
+              <div>
+                <BiTrendingUp />
+                <p>DIFFICULTY</p>
+                <span>{props.difficulty}</span>
+              </div>
+              <div>
+                <FiUser />
+                <p>PARTICIPANTS</p>
+                <span>{props.participants}</span>
+              </div>
+              <div>
+                <AiOutlineStar />
+                <p>RATING</p>
+                <span>
+                  {props.rating?.toFixed(1)} / {props.ratingQuantity}
+                </span>
+              </div>
             </div>
             <div className={style.GuidesParrent}>
               <h2>Your Tour Guides</h2>

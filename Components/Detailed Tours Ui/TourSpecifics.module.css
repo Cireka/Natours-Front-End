@@ -13,33 +13,33 @@
   justify-items: center;
   padding: 0 6rem;
 }
-.DetailsParrent {
+.StatsParrent {
   padding-right: 16.2rem;
 }
 
-.DetailsParrent > div {
+.StatsParrent > div {
   display: flex;
   align-items: center;
   margin-bottom: 1.8rem;
 }
-.DetailsParrent > div > p {
+.StatsParrent > div > p {
   font-weight: 500;
   font-size: 1.4rem;
   color: #666666;
   margin-right: 1.6rem;
 }
-.DetailsParrent > div > span {
+.StatsParrent > div > span {
   font-weight: 300;
   font-size: 1.4rem;
 }
-.DetailsParrent > div > svg {
+.StatsParrent > div > svg {
   color: #28b487;
   width: 25px;
   height: auto;
   margin-right: 1.2rem;
 }
 
-.DetailsParrent > h2 {
+.StatsParrent > h2 {
   margin-bottom: 3.2rem;
   font-size: 2.25rem;
   text-transform: uppercase;
@@ -127,4 +127,102 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+@media (max-width: 987px) {
+  .SpecificsParrent {
+    width: 100%;
+  }
+  .DetailsParrent {
+    padding-right: 0rem;
+    padding-left: 3rem;
+  }
+  .TourSpecificsParrent {
+    padding: 0 2rem;
+  }
+
+  .DetailsParrent > div > p {
+    font-size: 1rem;
+  }
+  .DetailsParrent > div > span {
+    font-size: 1.2rem;
+  }
+
+  .DetailsParrent > h2 {
+    font-size: 1.6rem;
+  }
+  .GuidesParrent > h2 {
+    font-size: 1.6rem;
+  }
+  .DetailsParrent > div {
+    margin-bottom: 1.2rem;
+  }
+
+  .AboutBox {
+    width: 100%;
+  }
+
+  .AboutBox > h2 {
+    font-size: 1.6rem;
+  }
+  .AboutBox > p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 915px) {
+  .AboutBox > p {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 740px) {
+  .DetailsParrent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 22.2rem;
+    padding-top: 3.2rem;
+  }
+  .TourSpecificsSection {
+    background: #f7f7f7;
+  }
+  .TourSpecificsParrent {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .AboutBox {
+    display: block;
+    height: 30rem;
+    padding: 0;
+    margin-bottom: 3.2rem;
+    text-align: center;
+  }
+  .StatsParrent {
+    padding-right: 0rem;
+  }
+
+  .GuidesParrent > h2 {
+    font-size: 2.25rem;
+  }
+  .GuidesParrent {
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 350px) {
+  .DetailsParrent {
+    padding-top: 8.2rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .DetailsParrent {
+    padding-top: 8.2rem;
+  }
+  .StatsParrent > div > p {
+    font-size: 1.1rem;
+    margin-right: 1rem;
+  }
 }
