@@ -91,3 +91,50 @@
 .Button:active {
   background-color: #55c57a;
 }
+@media (max-width: 750px) {
+  .BookTourSection {
+    width: 77%;
+  }
+  .image1,
+  .image2,
+  .image3 {
+    display: none;
+  }
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.6rem;
+    width: 100%;
+  }
+  .title > h2 {
+    padding-left: 0;
+  }
+  .title > p {
+    padding-left: 0;
+  }
+  .BookTourBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.8rem;
+    padding-left: 3.2rem;
+  }
+  .ButtonParrent {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 673px) {
+  .title > h2 {
+    font-size: 2rem;
+  }
+
+  .Button {
+    font-size: 1.4rem;
+    padding: 1.4rem 2.8rem;
+  }
+}
