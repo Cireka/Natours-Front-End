@@ -10,7 +10,7 @@ export default function TourGallery(props) {
           className={style.Image}
           alt="Tour Images"
           quality={100}
-          width={680}
+          width={600}
           height={453}
           src={`/tours/${props.imageOne}`}
         />
@@ -19,7 +19,7 @@ export default function TourGallery(props) {
           className={style.Image}
           alt="Tour Images"
           quality={100}
-          width={680}
+          width={600}
           height={453}
           src={`/tours/${props.imageTwo}`}
         />
@@ -28,7 +28,7 @@ export default function TourGallery(props) {
           className={style.Image}
           alt="Tour Images"
           quality={100}
-          width={680}
+          width={600}
           height={453}
           src={`/tours/${props.imageThree}`}
         />

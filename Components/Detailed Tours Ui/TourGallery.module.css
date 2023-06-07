@@ -1,18 +1,32 @@
 .TourGallerySection {
   width: 97%;
   margin: 0 auto;
-  margin-top: -32.2rem;
+  margin-top: -15%;
+  margin-bottom: 1%;
+  clip-path: polygon(100% 82.25%, 100% 0%, 0% 17.75%, 0% 100%);
+  background-color: #000000;
+}
+.Image {
+  width: calc(100% / 3);
+  height: auto;
 }
 .TourGalleryParrent {
   display: flex;
   justify-content: center;
   align-items: center;
-  clip-path: polygon(
-    50% 8.88%,
-    100% 0%,
-    100% 82.25%,
-    50% 91.13%,
-    0% 100%,
-    0% 17.75%
-  );
+}
+@media (max-width: 1300px) {
+  .Image {
+    width: 100%;
+    height: auto;
+  }
+  .TourGallerySection {
+    clip-path: none;
+  }
+  .TourGalleryParrent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }

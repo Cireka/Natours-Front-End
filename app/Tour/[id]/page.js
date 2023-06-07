@@ -44,12 +44,12 @@ export default function Tour({ params }) {
         ratingQuantity={tourData?.ratingsQuantity}
         guides={tourData?.guides}
       />
-      {/* <TourGallery
+      <TourGallery
         imageOne={tourData?.images[0]}
         imageTwo={tourData?.images[1]}
         imageThree={tourData?.images[2]}
-      /> */}
-      {/* <TourMap locations={tourData?.locations} /> */}
+      />
+      <TourMap locations={tourData?.locations} />
       <Reviews reviews={tourData?.reviews} />
       {/* <TourBook
         tourId={id}

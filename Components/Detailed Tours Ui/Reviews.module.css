@@ -2,14 +2,8 @@
   width: 97%;
   margin: 0 auto;
   margin-top: -22rem;
-  clip-path: polygon(
-    50% 8.88%,
-    100% 0%,
-    100% 82.25%,
-    50% 91.13%,
-    0% 100%,
-    0% 17.75%
-  );
+  clip-path: polygon(100% 82.25%, 100% 0%, 0% 17.75%, 0% 100%);
+  background-color: #000000;
 }
 .ReviewsParrent {
   height: 70rem;
@@ -22,13 +16,4 @@
     to(#28b487)
   );
   background: linear-gradient(to right bottom, #7dd56f, #28b487);
-  clip-path: polygon(
-    0 var(--section-rotate),
-    100% 0,
-    100% calc(100% - var(--section-rotate)),
-    0 100%
-  );
-}
-
-@media (max-width: 1639px) {
 }
