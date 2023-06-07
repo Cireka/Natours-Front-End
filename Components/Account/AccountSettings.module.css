@@ -109,3 +109,33 @@
   font-size: 1.4rem;
   color: #55c57a;
 }
+@media (max-width: 925px) {
+  .FormParrent {
+    width: 50rem;
+  }
+  .Button {
+    width: 40%;
+    margin-top: 4.2rem;
+  }
+}
+@media (max-width: 713px) {
+  .FormParrent {
+    width: 30rem;
+  }
+  .Button {
+    width: 60%;
+    margin-top: 4.2rem;
+  }
+}
+@media (max-width: 340px) {
+  .FormParrent {
+    width: 24rem;
+  }
+  .Button {
+    width: 75%;
+    margin-top: 4.2rem;
+  }
+  .Form > h2 {
+    font-size: 2rem;
+  }
+}

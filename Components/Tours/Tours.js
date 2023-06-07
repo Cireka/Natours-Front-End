@@ -20,7 +20,7 @@ export default function Tours() {
     const data = await getAllTours(
       "https://natours-app-xp62.onrender.com/api/v1/tours"
     );
-    console.log(data.data.doc);
+
     setData(data.data.doc);
   }
   useEffect(() => {

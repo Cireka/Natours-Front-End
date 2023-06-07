@@ -35,7 +35,7 @@ export default function Account({ params }) {
   }, []);
 
   const userId = userData?._id;
-  console.log(userData);
+
   return (
     <Fragment>
       <NavBar />
@@ -54,18 +54,6 @@ export default function Account({ params }) {
             >
               My Bookings
             </h2>
-            {/* <h2
-              onClick={() => handleSectionClick(2)}
-              className={selectedSection === 2 ? style.SelectedSection : ""}
-            >
-              My Reviews
-            </h2> */}
-            {/* <h2
-              onClick={() => handleSectionClick(3)}
-              className={selectedSection === 3 ? style.SelectedSection : ""}
-            >
-              Billing
-            </h2> */}
           </div>
           <div className={style.AccountConfigurationParrent}>
             {selectedSection === 0 && (

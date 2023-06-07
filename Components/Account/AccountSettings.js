@@ -19,7 +19,7 @@ export default function AccountSettings(props) {
     setUserData({ name: name, email: email });
   }, [props.bottomInputPlaceValue, props.topInputPlaceValue]);
 
-  // console.log(userData);
+
   const nameChangeHandler = (event) => {
     const name = event.target.value;
     setUserData({ ...userData, name: name });
@@ -52,7 +52,8 @@ export default function AccountSettings(props) {
             setError(undefined);
             setVissible(true);
           }
-          console.log(data);
+
+          
         })
         .catch((err) => {
           console.log(err);

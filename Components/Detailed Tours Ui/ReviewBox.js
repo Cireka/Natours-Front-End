@@ -5,7 +5,7 @@ import ReviewStars from "./ReviewStars";
 export default function ReviewBox(props) {
   const rating = props.rating;
 
-  console.log(props.image);
+
   return (
     <div className={style.reviewBoxParrent}>
       <div className={style.userParrent}>

@@ -29,7 +29,8 @@ export default function RegisterInput() {
     })
       .then((res) => res.json()) // Parse response as JSON
       .then((data) => {
-        console.log(data);
+    
+
         if (data.status === "success") {
           setUserToken(data.message);
         } else if (data.message.indexOf('Duplicate Key Value: "email:') === 0) {
@@ -52,7 +53,7 @@ export default function RegisterInput() {
       // if it is we set it inside the cookie and than go to page
       // on that page we can already render personal information because user was validated by our backend
       // but we keep token in storage just in case we need to make post request with it to secure api
-      console.log("cookie set");
+
       Cookies.set("jwt", userToken, {
         expires: maxAge,
         path: "/", // Adjust the path based on your requirements

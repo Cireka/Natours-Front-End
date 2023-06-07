@@ -13,7 +13,7 @@ export default function MyReviews(props) {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data.Review);
+
         setUserReview(data);
       })
       .catch((err) => {

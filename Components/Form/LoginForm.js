@@ -45,10 +45,7 @@ export default function LoginForm() {
   };
   useEffect(() => {
     if (userToken) {
-      // send token to backend and see if it is valid
-      // if it is we set it inside the cookie and than go to page
-      // on that page we can already render personal information because user was validated by our backend
-      // but we keep token in storage just in case we need to make post request with it to secure api
+     
 
       Cookies.set("jwt", userToken, {
         expires: maxAge,

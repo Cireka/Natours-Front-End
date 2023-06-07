@@ -19,7 +19,6 @@ export default function UpdatePassword({ params }) {
   const token = params.token;
 
   const SubmitHanddler = (event) => {
-    console.log(userPassword);
     setButtonText("PROCESSING...");
     event.preventDefault();
     fetch(
@@ -45,7 +44,8 @@ export default function UpdatePassword({ params }) {
           router.push("/");
           // log in user
         } else {
-          console.log(data);
+
+          
         }
       })
       .catch((err) => {

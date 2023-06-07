@@ -26,6 +26,7 @@
     rgb(43, 170, 96) 98.3%
   );
 }
+
 .AccountSectionsParrent > h2 {
   position: relative;
   padding-left: 20%;
@@ -62,4 +63,52 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 898px) {
+  .AccountParrent {
+    width: 140rem;
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
+  }
+  .AccountSectionsParrent {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 3.2rem;
+  }
+  .AccountSectionsParrent > h2 {
+    padding-left: 0;
+  }
+  .SelectedSection::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 2.6rem;
+    transform: translatex(-50%);
+    width: 7.2rem;
+    height: 0.2rem;
+    border-radius: 2px;
+    background-color: white;
+  }
+  .AccountParrent {
+    height: 100%;
+  }
+  .AccountConfigurationParrent {
+    max-height: 100%;
+    overflow-y: scroll;
+  }
+  .AccountSection {
+    margin-bottom: 3.2rem;
+  }
+}
+
+@media (max-width: 414px) {
+  .AccountSectionsParrent > h2 {
+    font-size: 1.6rem;
+  }
 }

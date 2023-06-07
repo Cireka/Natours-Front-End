@@ -29,7 +29,7 @@ export default function MyBookings() {
       .then((response) => response.json())
       .then((data) => {
         setItem(data.data);
-        console.log(data.data);
+
       })
       .catch((err) => {
         console.log(err);
