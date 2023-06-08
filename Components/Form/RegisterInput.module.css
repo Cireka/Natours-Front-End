@@ -1,3 +1,6 @@
+.Form {
+  margin-bottom: 6.2rem;
+}
 .InputParrent {
   margin: 0 auto;
   max-width: 55rem;
@@ -95,4 +98,25 @@
 }
 .SubmitButton:active {
   background-color: #449e62;
+}
+
+@media (max-width: 614px) {
+  .InputParrent {
+    max-width: 38rem;
+  }
+  .SubmitButton {
+    font-size: 1rem;
+  }
+
+  .fromContainer > div > label {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 408px) {
+  .InputParrent {
+    max-width: 28rem;
+    padding: 5rem 3rem;
+    margin-top: 4rem;
+  }
 }

@@ -29,8 +29,6 @@ export default function RegisterInput() {
     })
       .then((res) => res.json()) // Parse response as JSON
       .then((data) => {
-    
-
         if (data.status === "success") {
           setUserToken(data.message);
         } else if (data.message.indexOf('Duplicate Key Value: "email:') === 0) {
@@ -49,11 +47,6 @@ export default function RegisterInput() {
   }
   useEffect(() => {
     if (userToken) {
-      // send token to backend and see if it is valid
-      // if it is we set it inside the cookie and than go to page
-      // on that page we can already render personal information because user was validated by our backend
-      // but we keep token in storage just in case we need to make post request with it to secure api
-
       Cookies.set("jwt", userToken, {
         expires: maxAge,
         path: "/", // Adjust the path based on your requirements
@@ -80,7 +73,7 @@ export default function RegisterInput() {
     setUserInfo({ ...userInfo, passwordConfirm: input });
   };
   return (
-    <form onSubmit={SubmitHanddler}>
+    <form className={style.Form} onSubmit={SubmitHanddler}>
       <div className={style.InputParrent}>
         <div className={style.titleParrent}>
           <h2>Create Your Account!</h2>

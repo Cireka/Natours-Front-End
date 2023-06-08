@@ -45,8 +45,6 @@ export default function LoginForm() {
   };
   useEffect(() => {
     if (userToken) {
-     
-
       Cookies.set("jwt", userToken, {
         expires: maxAge,
         path: "/", // Adjust the path based on your requirements
@@ -64,7 +62,7 @@ export default function LoginForm() {
     setUserInfo({ ...userInfo, password: input });
   };
   return (
-    <form onSubmit={SubmitHanddler}>
+    <form className={style.Form} onSubmit={SubmitHanddler}>
       <div className={style.InputParrent}>
         <div className={style.titleParrent}>
           <h2>Log into your account</h2>

@@ -81,17 +81,63 @@
 .DissabledProfileIcon {
   display: none;
 }
+@media (max-width: 1000px) {
+  .regButton {
+    border: 1px solid white;
+    border-radius: 2rem;
+    padding: 1rem 1.8rem;
+  }
+}
+@media (max-width: 660px) {
+  .NavBarParrent {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 3.2rem;
+    justify-content: flex-start;
+    align-items: center;
+    color: #f7f7f7;
+  }
+  .NavButtonsParrent {
+    order: 2;
+    flex: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .HomeLinkParrent {
+    order: 1;
+    flex: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.8rem;
+  }
+  .NavBar {
+    padding: 0;
+    padding-left: 2rem;
+  }
+}
 @media (max-width: 554px) {
+  .Image {
+    margin-left: 1.8rem;
+  }
   .NavBar {
     padding: 0 2rem;
   }
 }
 @media (max-width: 455px) {
+  .regButton {
+    padding: 0.4rem 0.8rem;
+    font-size: 1.2rem;
+  }
+  .NavBarParrent {
+    gap: 1.6rem;
+  }
   .NavBar {
     padding: 0 0.4rem;
   }
   .Image {
-    width: 3.5rem;
+    width: 5.2rem;
     height: auto;
   }
   .ProfileIcon {
@@ -102,5 +148,11 @@
   .logButton,
   .regButton {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .Image {
+    margin-left: 0.2rem;
   }
 }
