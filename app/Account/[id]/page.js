@@ -74,7 +74,7 @@ export default function Account({ params }) {
               </div>
             )}
             {selectedSection === 1 && <MyBookings />}
-            {/* {selectedSection === 2 && <MyReviews userId={userId} />} */}
+            {selectedSection === 2 && <MyReviews userId={userId} />}
           </div>
         </div>
       </section>

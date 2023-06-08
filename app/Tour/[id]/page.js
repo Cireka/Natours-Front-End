@@ -24,7 +24,7 @@ export default function Tour({ params }) {
     getTours();
   }, []);
 
-  console.log(tourData);
+
   return (
     <Fragment>
       <NavBar />
