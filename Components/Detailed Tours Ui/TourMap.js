@@ -15,7 +15,6 @@ export default function TourMap(props) {
     };
   });
 
-
   const markers = [
     ...(locations?.map((item) => ({
       position: [item.coordinates[1], item.coordinates[0]],
@@ -25,7 +24,7 @@ export default function TourMap(props) {
   ];
 
   const customIcon = L.icon({
-    iconUrl: "/pin.PNG", // Path to your custom icon image
+    iconUrl: "/pin.png", // Path to your custom icon image
     iconSize: [36, 42], // Size of the icon
     iconAnchor: [16, 32], // Anchor point of the icon (relative to its top-left corner)
   });
@@ -48,7 +47,6 @@ export default function TourMap(props) {
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://api.maptiler.com/maps/ch-swisstopo-lbm-grey/{z}/{x}/{y}.png?key=q3TC08gAa50Q1hSu6NMr"
-           
           />
           {markers.map((marker, index) => (
             <Marker key={index} position={marker.position} icon={customIcon}>
