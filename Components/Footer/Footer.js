@@ -12,7 +12,6 @@ export default function Footer() {
           height={30}
           src={"/logo-green.png"}
         />
-
         <div className={style.LinksParrent}>
           <Link href={"/"}>About us</Link>
           <Link href={"/"}>Download apps</Link>

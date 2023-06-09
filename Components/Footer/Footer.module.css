@@ -74,7 +74,23 @@
 }
 
 @media (max-width: 389px) {
-  .LinksParrent {
+  .LinksParrent > * {
+    font-weight: 500;
+  }
+  .Image {
+    width: 12rem;
+    height: auto;
+  }
+  .FooterContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .FooterPar {
+    font-weight: 500;
+    text-align: center;
+  }
+  /* .LinksParrent {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: end;
@@ -91,5 +107,5 @@
   }
   .LinksParrent > * {
     font-size: 0.7rem;
-  }
+  } */
 }
