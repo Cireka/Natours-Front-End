@@ -107,7 +107,7 @@ To run this project on your local environment, follow these simple steps:
    http://localhost:3000
    
 ## Contributing
-If you'd like to contribute to Coza Store, we'd be more than happy to welcome your contributions. Feel free to fork the repository, make your changes, and submit a pull request.
+If you'd like to contribute to Natours, we'd be more than happy to welcome your contributions. Feel free to fork the repository, make your changes, and submit a pull request.
 
 ## Feedback
 We value your feedback! If you have any suggestions, issues, or feature requests, please don't hesitate to create an issue in the repository.
