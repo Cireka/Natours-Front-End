@@ -8,7 +8,7 @@ export default function Login() {
     <Fragment>
       <NavBar />
       <LoginForm />
-      <Footer/>
+      <Footer />
     </Fragment>
   );
 }
