@@ -116,9 +116,6 @@
   }
 }
 @media (max-width: 554px) {
-  .Image {
-    margin-left: 1.8rem;
-  }
   .NavBar {
     padding: 0 2rem;
   }
@@ -132,7 +129,7 @@
     gap: 1.6rem;
   }
   .NavBar {
-    padding: 0 0.4rem;
+    padding: 0 1.2rem;
   }
 
   .Image {
