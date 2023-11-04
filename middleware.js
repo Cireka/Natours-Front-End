@@ -9,15 +9,15 @@ export default async function middleware(req) {
 
   if (
     valid.status === "fail" &&
-    req.url.includes(`http://localhost:3000/Account/`)
+    req.url.includes(`https://natours-front-end.vercel.app/Account/`)
   ) {
     Cookies.remove("jwt");
-    return NextResponse.redirect("http://localhost:3000");
+    return NextResponse.redirect("https://natours-front-end.vercel.app");
   } else if (
     valid.status === "success" &&
-    (req.url.includes("http://localhost:3000/SignUp") ||
-      req.url.includes("http://localhost:3000/LogIn"))
+    (req.url.includes("https://natours-front-end.vercel.app/SignUp") ||
+      req.url.includes("https://natours-front-end.vercel.app/LogIn"))
   ) {
-    return NextResponse.redirect("http://localhost:3000");
+    return NextResponse.redirect("https://natours-front-end.vercel.app");
   }
 }
