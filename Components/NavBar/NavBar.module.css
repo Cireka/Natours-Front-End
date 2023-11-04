@@ -1,8 +1,8 @@
 .NavBar {
   margin: 0 auto;
-  margin-top: 3rem;
+
   padding: 0 5rem;
-  width: 97%;
+  width: 100%;
   height: 8rem;
   background-color: #444;
 }
@@ -24,6 +24,7 @@
 .NavButtonsParrent {
   flex: 1; /* Take up remaining space */
   display: flex;
+  gap: 1.8rem;
   justify-content: flex-end; /* Align buttons to the right */
   align-items: center;
 }
@@ -61,7 +62,6 @@
 }
 .logButton {
   border: none;
-  margin-right: 3rem;
 }
 .regButton {
   border: 1px solid white;
@@ -90,11 +90,9 @@
 }
 @media (max-width: 660px) {
   .NavBarParrent {
-    height: 100%;
-    width: 100%;
     display: flex;
     gap: 3.2rem;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     color: #f7f7f7;
   }
@@ -136,6 +134,7 @@
   .NavBar {
     padding: 0 0.4rem;
   }
+
   .Image {
     width: 5.2rem;
     height: auto;

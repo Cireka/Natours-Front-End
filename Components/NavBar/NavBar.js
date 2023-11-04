@@ -30,6 +30,7 @@ export default function NavBar() {
       <div className={style.NavBar}>
         <div className={style.NavBarParrent}>
           <div className={style.HomeLinkParrent}>
+            <Image alt="Natours Logo" className={style.Image} src={Logo} />
             <CgProfile
               onClick={ProfileHandler}
               className={token ? style.ProfileIcon : style.DissabledProfileIcon}
@@ -38,7 +39,6 @@ export default function NavBar() {
               <h1 className={style.AllTours}>All Tours</h1>
             </Link>
           </div>
-          <Image alt="Natours Logo" className={style.Image} src={Logo} />
           <div className={style.NavButtonsParrent}>
             {!token && (
               <Link href={"/LogIn"} className={style.logButton}>
